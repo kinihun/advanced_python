@@ -13,7 +13,8 @@ def main():
     # Merge two dictionaries with a comprehension
     team1 = {"Jones": 24, "Jameson": 18, "Smith": 58, "Burns": 7}
     team2 = {"White": 12, "Macke": 88, "Perce": 4}
-    newTeam = {k: v for team in (team1, team2) for k, v in team.items()}
+    #newTeam = {k: v for team in (team1, team2) for k, v in team.items()}
+    newTeam = { k: v for k,v in {**team1, **team2}.items()}
     print(newTeam)
 
 
